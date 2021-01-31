@@ -1,0 +1,87 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "title": "The root schema",
+  "required": [
+    "name",
+    "email",
+    "phone",
+    "street",
+    "city",
+    "customerType",
+    "market",
+    "products",
+    "totalPrice",
+    "testId",
+    "orgNumber"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "The name schema",
+      "description": "The user's name.",
+      "default": ""
+    },
+    "email": {
+      "type": "string",
+      "title": "The email schema",
+      "description": "The customer's email address.",
+      "default": ""
+    },
+    "phone": {
+      "type": "string",
+      "title": "The phone schema",
+      "description": "The customer's phone number.",
+      "default": ""
+    },
+    "street": {
+      "type": "string",
+      "title": "The street schema",
+      "description": "The street the customer lives on.",
+      "default": ""
+    },
+    "city": {
+      "type": "string",
+      "title": "The city schema",
+      "description": "The city the customer lives in.",
+      "default": ""
+    },
+    "customerType": {
+      "type": "string",
+      "title": "The customerType schema",
+      "description": "What kind of customer is this: B2B or B2C?",
+      "default": ""
+    },
+    "market": {
+      "type": "string",
+      "title": "The market schema",
+      "description": "Which market is the customer part of?",
+      "default": ""
+    },
+    "products": {
+      "type": "string",
+      "title": "The products schema",
+      "description": "String of product SKUs that the customer will purchase.",
+      "default": ""
+    },
+    "totalPrice": {
+      "type": "number",
+      "title": "The totalPrice schema",
+      "description": "Total cost in USD cents of products.",
+      "default": 0
+    },
+    "testId": {
+      "type": "number",
+      "title": "The testId schema",
+      "description": "The unique test ID. Will be 0 if not part of a test.",
+      "default": 0
+    },
+    "orgNumber": {
+      "type": "number",
+      "title": "The orgNumber schema",
+      "description": "The unique organization number for a B2B customer. Will be 0 if sent by a B2C customer.",
+      "default": 0
+    }
+  }
+}

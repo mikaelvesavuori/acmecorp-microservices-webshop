@@ -1,0 +1,78 @@
+{
+  "$schema": "https://arkit.js.org/schema.json",
+  "excludePatterns": ["__tests__/"],
+  "components": [
+    {
+      "type": "Database Service",
+      "patterns": ["src/microservices/database/*.ts"]
+    },
+    {
+      "type": "Database Entities",
+      "patterns": ["src/microservices/database/entities/*.ts"]
+    },
+    {
+      "type": "Database API",
+      "patterns": [
+        "src/microservices/database/frameworks/*.ts",
+        "src/microservices/database/frameworks/mutations/*.ts",
+        "src/microservices/database/frameworks/queries/*.ts",
+        "src/microservices/database/frameworks/resolvers/*.ts"
+      ]
+    },
+    {
+      "type": "Delivery Service",
+      "patterns": ["src/microservices/delivery/*.ts"]
+    },
+    {
+      "type": "Email Service",
+      "patterns": ["src/microservices/email/*.ts", "src/microservices/email/**/*.ts"]
+    },
+    {
+      "type": "Finance Service",
+      "patterns": ["src/microservices/finance/*.ts"]
+    },
+    {
+      "type": "Order Service",
+      "patterns": [
+        "src/microservices/order/controllers/*.ts",
+        "src/microservices/order/usecases/*.ts",
+        "src/microservices/order/usecases/interactors/*.ts"
+      ]
+    },
+    {
+      "type": "Stock Service",
+      "patterns": ["src/microservices/stock/*.ts"]
+    }
+  ],
+  "output": [
+    {
+      "path": "arkit.svg",
+      "groups": [
+        {
+          "type": "Database",
+          "components": ["Database Service", "Database Entities", "Database API"]
+        },
+        {
+          "type": "Delivery",
+          "components": ["Delivery Service"]
+        },
+        {
+          "type": "Email",
+          "components": ["Email Service"]
+        },
+        {
+          "type": "Finance",
+          "components": ["Finance Service"]
+        },
+        {
+          "type": "Order",
+          "components": ["Order Service"]
+        },
+        {
+          "type": "Stock",
+          "components": ["Stock Service"]
+        }
+      ]
+    }
+  ]
+}

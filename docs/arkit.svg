@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="993px" preserveAspectRatio="none" style="width:769px;height:993px;" version="1.1" viewBox="0 0 769 993" width="769px" zoomAndPan="magnify"><defs/><g><!--MD5=[815249f79c2c08157ac02b3106e03757]
+cluster Database--><path d="M68.0563,712 L131.0563,712 A4.5,4.5 0 0 1 134.0563,715 L141.0563,732.4844 L754.556,732.4844 A3,3 0 0 1 757.556,735.4844 L757.556,978 A3,3 0 0 1 754.556,981 L68.0563,981 A3,3 0 0 1 65.0563,978 L65.0563,715 A3,3 0 0 1 68.0563,712 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="65.0563" x2="141.0563" y1="732.4844" y2="732.4844"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="63" x="69.0563" y="726.0059">Database</text><!--MD5=[d16a42daa9239977498104b7c7091e07]
+cluster Delivery--><path d="M52.0563,420 L105.0563,420 A4.5,4.5 0 0 1 108.0563,423 L115.0563,440.4844 L202.056,440.4844 A3,3 0 0 1 205.056,443.4844 L205.056,543 A3,3 0 0 1 202.056,546 L52.0563,546 A3,3 0 0 1 49.0563,543 L49.0563,423 A3,3 0 0 1 52.0563,420 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="49.0563" x2="115.0563" y1="440.4844" y2="440.4844"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="53" x="53.0563" y="434.0059">Delivery</text><!--MD5=[6528143b867d1c9970d04da3aade911e]
+cluster Email--><path d="M68.5563,570 L104.5563,570 A4.5,4.5 0 0 1 107.5563,573 L114.5563,590.4844 L357.556,590.4844 A3,3 0 0 1 360.556,593.4844 L360.556,685 A3,3 0 0 1 357.556,688 L68.5563,688 A3,3 0 0 1 65.5563,685 L65.5563,573 A3,3 0 0 1 68.5563,570 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="65.5563" x2="114.5563" y1="590.4844" y2="590.4844"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="69.5563" y="584.0059">Email</text><!--MD5=[34b60ec586d61263f4c3eb1a4a9d4553]
+cluster Finance--><path d="M75.0563,321 L126.0563,321 A4.5,4.5 0 0 1 129.0563,324 L136.0563,341.4844 L179.056,341.4844 A3,3 0 0 1 182.056,344.4844 L182.056,393 A3,3 0 0 1 179.056,396 L75.0563,396 A3,3 0 0 1 72.0563,393 L72.0563,324 A3,3 0 0 1 75.0563,321 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="72.0563" x2="136.0563" y1="341.4844" y2="341.4844"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="51" x="76.0563" y="335.0059">Finance</text><!--MD5=[4523f918a499262345e8d765b0fe948b]
+cluster Order--><path d="M38.5563,123 L75.5563,123 A4.5,4.5 0 0 1 78.5563,126 L85.5563,143.4844 L545.056,143.4844 A3,3 0 0 1 548.056,146.4844 L548.056,294 A3,3 0 0 1 545.056,297 L38.5563,297 A3,3 0 0 1 35.5563,294 L35.5563,126 A3,3 0 0 1 38.5563,123 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="35.5563" x2="85.5563" y1="143.4844" y2="143.4844"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="37" x="39.5563" y="137.0059">Order</text><!--MD5=[3603880d119581f4426b6614498d21f5]
+cluster Stock--><path d="M84.0563,24 L122.0563,24 A4.5,4.5 0 0 1 125.0563,27 L132.0563,44.4844 L170.056,44.4844 A3,3 0 0 1 173.056,47.4844 L173.056,96 A3,3 0 0 1 170.056,99 L84.0563,99 A3,3 0 0 1 81.0563,96 L81.0563,27 A3,3 0 0 1 84.0563,24 " fill="#FFFFFF" style="stroke: #000000; stroke-width: 1.5;"/><line style="stroke: #000000; stroke-width: 1.5;" x1="81.0563" x2="132.0563" y1="44.4844" y2="44.4844"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="38" x="85.0563" y="38.0059">Stock</text><ellipse cx="471.3674" cy="945.7623" fill="#F8F8F8" rx="81.8114" ry="18.7623" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="140" x="401.3674" y="949.5045">addDeliveryDataToOrder</text><ellipse cx="127.1895" cy="944.242" fill="#F8F8F8" rx="46.1335" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="61" x="96.6895" y="947.9842">database</text><ellipse cx="295.9616" cy="920.242" fill="#F8F8F8" rx="33.4056" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="43" x="274.4616" y="923.9842">delivery</text><ellipse cx="471.7844" cy="894.9457" fill="#F8F8F8" rx="62.7284" ry="14.9457" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="95" x="424.2844" y="898.6879">getAllTestOrders</text><ellipse cx="471.4113" cy="850.242" fill="#F8F8F8" rx="38.3553" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="50" x="446.4113" y="853.9842">getOrder</text><ellipse cx="296.2692" cy="850.242" fill="#F8F8F8" rx="24.2132" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="30" x="281.2692" y="853.9842">order</text><ellipse cx="682.1553" cy="849.8199" fill="#F8F8F8" rx="59.5993" ry="14.3199" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="87" x="638.6553" y="853.562">OrderDatabase</text><ellipse cx="471.6037" cy="807.242" fill="#F8F8F8" rx="47.5477" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="63" x="440.1037" y="810.9842">placeOrder</text><ellipse cx="127.0327" cy="858.242" fill="#F8F8F8" rx="40.4767" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="53" x="100.5327" y="861.9842">resolvers</text><ellipse cx="127.1184" cy="901.242" fill="#F8F8F8" rx="39.0624" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="51" x="101.6184" y="904.9842">typeDefs</text><ellipse cx="471.5732" cy="761.0034" fill="#F8F8F8" rx="68.0172" ry="16.0034" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="108" x="417.5732" y="764.7456">updateOrderStatus</text><ellipse cx="127.1553" cy="467.8199" fill="#F8F8F8" rx="59.5993" ry="14.3199" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="87" x="83.6553" y="471.562">BookDelivery</text><ellipse cx="126.9923" cy="514.7873" fill="#F8F8F8" rx="61.9363" ry="14.7873" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="93" x="80.4923" y="518.5294">DeliveryTimes</text><ellipse cx="296.1687" cy="616.242" fill="#F8F8F8" rx="34.1127" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="44" x="274.1687" y="619.9842">content</text><ellipse cx="127.0118" cy="659.242" fill="#F8F8F8" rx="28.4558" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="36" x="109.0118" y="662.9842">Email</text><ellipse cx="126.9824" cy="616.242" fill="#F8F8F8" rx="45.4264" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="96.9824" y="619.9842">messages</text><ellipse cx="295.8108" cy="659.242" fill="#F8F8F8" rx="48.2548" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="64" x="263.8108" y="662.9842">nodemailer</text><ellipse cx="127.1184" cy="367.242" fill="#F8F8F8" rx="39.0624" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="51" x="101.6184" y="370.9842">Finance</text><ellipse cx="127.0118" cy="169.7912" fill="#F8F8F8" rx="56.9558" ry="13.7912" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="80" x="87.0118" y="173.5334">CreateOrder</text><ellipse cx="471.4274" cy="216.9743" fill="#F8F8F8" rx="60.3714" ry="14.4743" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="89" x="426.9274" y="220.7165">paymentMexico</text><ellipse cx="471.3108" cy="171.242" fill="#F8F8F8" rx="48.2548" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="64" x="439.3108" y="174.9842">paymentUs</text><ellipse cx="126.9708" cy="214.783" fill="#F8F8F8" rx="54.4148" ry="13.283" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="73" x="90.4708" y="218.5251">PlaceOrder</text><ellipse cx="127.2212" cy="263.033" fill="#F8F8F8" rx="75.6652" ry="17.533" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="126" x="64.2212" y="266.7752">UpdateOrderStatus</text><ellipse cx="296.1553" cy="262.8199" fill="#F8F8F8" rx="59.5993" ry="14.3199" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="87" x="252.6553" y="266.562">useCaseB2bUs</text><ellipse cx="296.1553" cy="216.8199" fill="#F8F8F8" rx="59.5993" ry="14.3199" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="87" x="252.6553" y="220.562">useCaseB2cMx</text><ellipse cx="296.1553" cy="170.8199" fill="#F8F8F8" rx="59.5993" ry="14.3199" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="87" x="252.6553" y="174.562">useCaseB2cUs</text><ellipse cx="126.9261" cy="70.242" fill="#F8F8F8" rx="29.8701" ry="13.242" style="stroke: #383838; stroke-width: 0.5;"/><text fill="#000000" font-family="Tahoma, sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="38" x="107.9261" y="73.9842">Stock</text><!--MD5=[030fc76dfcd9868f02639e818a6d0ed9]
+link addDeliveryDataToOrder to OrderDatabase--><path d="M523.471,931.2556 C534.368,927.6248 545.71,923.4791 556.056,919 C591.605,903.6102 630.333,881.297 655.112,866.249 " fill="none" id="addDeliveryDataToOrder-&gt;OrderDatabase" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="659.572,863.527,649.8057,864.7998,655.3037,866.1311,653.9723,871.6291,659.572,863.527" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[bc8f5df7db4e3ec60768c0015b9fff15]
+link <b>CreateOrder</b> to useCaseB2bUs--><path d="M178.59,176.307 C190.848,179.723 203.236,184.965 213.056,193 C231.132,207.788 219.324,224.237 236.556,240 C240.897,243.97 246.004,247.289 251.361,250.053 " fill="none" id="&lt;b&gt;CreateOrder&lt;/b&gt;-&gt;useCaseB2bUs" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="255.909,252.247,249.5418,244.7331,251.4059,250.074,246.065,251.9381,255.909,252.247" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[69fe9c9e5b3f69fab60fccf7defee0a1]
+link <b>CreateOrder</b> to useCaseB2cMx--><path d="M166.608,180.253 C181.179,184.175 197.9,188.732 213.056,193 C225.913,196.621 239.871,200.663 252.564,204.384 " fill="none" id="&lt;b&gt;CreateOrder&lt;/b&gt;-&gt;useCaseB2cMx" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="257.547,205.846,250.0385,199.4724,252.7495,204.4373,247.7846,207.1484,257.547,205.846" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[c4fbebadfe71f60f755cfacc5430e657]
+link <b>CreateOrder</b> to useCaseB2cUs--><path d="M184.129,170.336 C199.283,170.427 215.792,170.525 231.332,170.618 " fill="none" id="&lt;b&gt;CreateOrder&lt;/b&gt;-&gt;useCaseB2cUs" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="236.562,170.65,227.5862,166.5961,231.5621,170.62,227.5382,174.5959,236.562,170.65" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[2463d8f6cc44d04d01ab759c787fd49f]
+link <b>database</b> to resolvers--><path d="M81.727,946.4307 C55.5565,945.0384 25.0353,937.9274 10.5563,914.5 C4.4812,904.6703 4.4812,898.3297 10.5563,888.5 C25.0859,864.991 55.6724,857.628 81.8596,856.005 " fill="none" id="&lt;b&gt;database&lt;/b&gt;-&gt;resolvers" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="87.0324,855.754,77.8489,852.1953,82.0383,855.9966,78.237,860.1859,87.0324,855.754" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[df778d7354976ac42f54db0f4ab1159f]
+link <b>database</b> to typeDefs--><path d="M127.056,930.8984 C127.056,927.0443 127.056,923.1902 127.056,919.3362 " fill="none" id="&lt;b&gt;database&lt;/b&gt;-&gt;typeDefs" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="127.056,914.0806,123.056,923.0806,127.056,919.0806,131.056,923.0806,127.056,914.0806" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[ca66be20a975a94d6ad96ec0fcda9380]
+link delivery to addDeliveryDataToOrder--><path d="M327.675,924.5884 C346.93,927.4738 372.649,931.328 396.958,934.9708 " fill="none" id="delivery-&gt;addDeliveryDataToOrder" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="402.121,935.7445,393.8121,930.4565,397.1761,935.0045,392.6281,938.3684,402.121,935.7445" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[4393bb1f1ee6f0f2bcddb46b199b9fcf]
+link <b>Email</b> to messages--><path d="M127.056,645.898 C127.056,642.044 127.056,638.19 127.056,634.336 " fill="none" id="&lt;b&gt;Email&lt;/b&gt;-&gt;messages" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="127.056,629.081,123.056,638.081,127.056,634.081,131.056,638.081,127.056,629.081" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[0645320371329fd3cc14bbb1bce0bad9]
+link <b>Email</b> to nodemailer--><path d="M155.633,659 C179.093,659 213.454,659 242.194,659 " fill="none" id="&lt;b&gt;Email&lt;/b&gt;-&gt;nodemailer" style="stroke: #000000; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="247.491,659,238.491,655,242.491,659,238.491,663,247.491,659" style="stroke: #000000; stroke-width: 1.0;"/><!--MD5=[fbbff5341ca6431d47fc4b2eca4cb515]
+link getAllTestOrders to OrderDatabase--><path d="M518.571,885.069 C552.176,877.816 597.667,867.998 631.969,860.594 " fill="none" id="getAllTestOrders-&gt;OrderDatabase" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="636.945,859.52,627.3039,857.5078,632.0574,860.5744,628.9909,865.3279,636.945,859.52" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[785ad943627fa00436099f260d0040e9]
+link getOrder to OrderDatabase--><path d="M510.314,850 C540.066,850 582.22,850 617.197,850 " fill="none" id="getOrder-&gt;OrderDatabase" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="622.303,850,613.303,846,617.303,850,613.303,854,622.303,850" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[0b33a09cf9c99477ff276e40953c07e4]
+link messages to content--><path d="M172.809,616 C198.967,616 231.644,616 256.631,616 " fill="none" id="messages-&gt;content" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="261.841,616,252.841,612,256.841,616,252.841,620,261.841,616" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[191ffdbd3624d58d112882a956336576]
+link messages to nodemailer--><path d="M161.45,624.598 C188.624,631.595 227.033,641.485 255.699,648.866 " fill="none" id="messages-&gt;nodemailer" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="260.573,650.121,252.8549,644.0029,255.731,648.8741,250.8598,651.7501,260.573,650.121" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[672437efbec397543c6d8a550ec81389]
+link order to getAllTestOrders--><path d="M317.984,855.428 C343.927,862.157 388.923,873.827 423.348,882.756 " fill="none" id="order-&gt;getAllTestOrders" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="428.347,884.052,420.6399,877.92,423.5072,882.7963,418.6309,885.6636,428.347,884.052" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[67bb9e3586d7bf7bb9e382c66bb6e911]
+link order to getOrder--><path d="M320.096,850 C347.395,850 393.454,850 427.437,850 " fill="none" id="order-&gt;getOrder" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="432.782,850,423.782,846,427.782,850,423.782,854,432.782,850" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[0b4915cfb88cf2a3584a32d764fb0c2f]
+link order to placeOrder--><path d="M318.331,844.727 C346.188,837.823 395.582,825.582 430.541,816.917 " fill="none" id="order-&gt;placeOrder" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="435.59,815.666,425.8921,813.9481,430.7368,816.8686,427.8163,821.7132,435.59,815.666" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[7af1121de11f3c12f74f1ad703a88027]
+link order to updateOrderStatus--><path d="M309.746,839.319 C326.88,825.359 358.819,800.936 389.556,786 C398.884,781.467 409.215,777.536 419.288,774.218 " fill="none" id="order-&gt;updateOrderStatus" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="424.208,772.638,414.416,771.5813,419.4474,774.1668,416.862,779.1982,424.208,772.638" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[1894a62bb236374f90533de206aace70]
+link placeOrder to OrderDatabase--><path d="M510.314,814.787 C544.119,821.759 593.934,832.032 631.042,839.685 " fill="none" id="placeOrder-&gt;OrderDatabase" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="635.96,840.7,627.9535,834.9645,631.0631,839.69,626.3375,842.7996,635.96,840.7" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[fc7ff598097df044c3b24f3642b071dd]
+link resolvers to delivery--><path d="M161.632,865.049 C177.46,868.787 196.468,873.878 213.056,880 C233.256,887.455 255.125,898.2715 271.195,906.7773 " fill="none" id="resolvers-&gt;delivery" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="275.987,909.3366,269.9328,901.5683,271.5767,906.981,266.1639,908.6248,275.987,909.3366" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[d09c3f11768e34cceb2354dbb0576573]
+link resolvers to order--><path d="M167.21,856.124 C197.759,854.661 239.464,852.663 266.815,851.353 " fill="none" id="resolvers-&gt;order" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="272.086,851.1,262.9044,847.5366,267.0918,851.34,263.2884,855.5274,272.086,851.1" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[931d8cc6c6da531dd7e2eb30bd45264f]
+link updateOrderStatus to OrderDatabase--><path d="M517.709,772.883 C530.284,776.632 543.84,781.092 556.056,786 C590.771,799.948 628.78,820.17 653.662,834.133 " fill="none" id="updateOrderStatus-&gt;OrderDatabase" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="658.152,836.664,652.2777,828.7588,653.7969,834.2078,648.3478,835.727,658.152,836.664" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[576827bf300a37c2f6b3ecaef272e4ba]
+link useCaseB2cMx to paymentMexico--><path d="M355.796,217 C371.921,217 389.493,217 405.93,217 " fill="none" id="useCaseB2cMx-&gt;paymentMexico" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="410.992,217,401.992,213,405.992,217,401.992,221,410.992,217" style="stroke: #000000; stroke-width: 0.5;"/><!--MD5=[b5745d65f1c55688d9733447fa63a63d]
+link useCaseB2cUs to paymentUs--><path d="M355.796,171 C375.744,171 397.907,171 417.395,171 " fill="none" id="useCaseB2cUs-&gt;paymentUs" style="stroke: #000000; stroke-width: 0.5; stroke-dasharray: 7.0,7.0;"/><polygon fill="#000000" points="422.817,171,413.817,167,417.817,171,413.817,175,422.817,171" style="stroke: #000000; stroke-width: 0.5;"/><script type="text/plantuml"><![CDATA[MD5=[abb08522a330ae95993171220daf965b]
+@startuml
+
+scale max 1920 width
+left to right direction
+
+skinparam nodesep 17
+skinparam ranksep 34
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Tahoma
+skinparam defaultFontSize 12
+skinparam roundCorner 6
+skinparam dpi 150
+skinparam arrowColor black
+skinparam arrowThickness 0.5
+skinparam packageTitleAlignment left
+
+skinparam usecase {
+  borderThickness 0.5
+}
+
+skinparam rectangle {
+  borderThickness 0.5
+}
+
+skinparam component {
+  borderThickness 1
+}
+
+
+package "Database" {
+  (addDeliveryDataToOrder)
+  (<b>database</b>)
+  (delivery)
+  (getAllTestOrders)
+  (getOrder)
+  (order)
+  (OrderDatabase)
+  (placeOrder)
+  (resolvers)
+  (typeDefs)
+  (updateOrderStatus)
+}
+
+package "Delivery" {
+  (<b>BookDelivery</b>)
+  (<b>DeliveryTimes</b>)
+}
+
+package "Email" {
+  (content)
+  (<b>Email</b>)
+  (messages)
+  (nodemailer)
+}
+
+package "Finance" {
+  (<b>Finance</b>)
+}
+
+package "Order" {
+  (<b>CreateOrder</b>)
+  (paymentMexico)
+  (paymentUs)
+  (<b>PlaceOrder</b>)
+  (<b>UpdateOrderStatus</b>)
+  (useCaseB2bUs)
+  (useCaseB2cMx)
+  (useCaseB2cUs)
+}
+
+package "Stock" {
+  (<b>Stock</b>)
+}
+
+(addDeliveryDataToOrder) ...> (OrderDatabase)
+(<b>CreateOrder</b>) ..[thickness=1]> (useCaseB2bUs)
+(<b>CreateOrder</b>) ..[thickness=1]> (useCaseB2cMx)
+(<b>CreateOrder</b>) ..[thickness=1]> (useCaseB2cUs)
+(<b>database</b>) .[thickness=1]> (resolvers)
+(<b>database</b>) .[thickness=1]> (typeDefs)
+(delivery) ..> (addDeliveryDataToOrder)
+(<b>Email</b>) .[thickness=1]> (messages)
+(<b>Email</b>) .[thickness=1]> (nodemailer)
+(getAllTestOrders) ...> (OrderDatabase)
+(getOrder) ...> (OrderDatabase)
+(messages) ..> (content)
+(messages) ..> (nodemailer)
+(order) ..> (getAllTestOrders)
+(order) ..> (getOrder)
+(order) ..> (placeOrder)
+(order) ..> (updateOrderStatus)
+(placeOrder) ...> (OrderDatabase)
+(resolvers) ..> (delivery)
+(resolvers) ..> (order)
+(updateOrderStatus) ...> (OrderDatabase)
+(useCaseB2cMx) ..> (paymentMexico)
+(useCaseB2cUs) ..> (paymentUs)
+
+@enduml
+
+
+' View and edit on https://arkit.pro
+]]></script></g></svg>

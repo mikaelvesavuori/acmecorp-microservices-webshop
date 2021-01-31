@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "build",
+    "target": "es6",
+    "lib": ["esnext", "dom"],
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "removeComments": true,
+    "sourceMap": true,
+    "strict": false,
+    "strictFunctionTypes": false,
+  },
+  "include": ["./src"],
+  "exclude": ["./.webpack", "./.serverless", "node_modules"]
+}

@@ -1,0 +1,310 @@
+service: acmecorp-webshop
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  frameworkVersion: "2"
+  stackTags:
+    Usage: microservicesdemo
+  tags:
+    Usage: microservicesdemo
+  tracing:
+    apiGateway: true
+  apiGateway:
+    minimumCompressionSize: 1024
+  region: ${opt:region, "eu-north-1"}
+  endpointType: EDGE
+  memorySize: 1024
+  timeout: 15
+  logRetentionInDays: 7
+  deploymentBucket:
+    blockPublicAccess: true
+    serverSideEncryption: AES256
+  iamRoleStatements:
+  - Effect: Allow
+    Action:
+      - xray:PutTelemetryRecords
+      - xray:PutTraceSegments
+    Resource: "*"
+
+custom:
+  allowedOrigin: "*" # Ideally don't use this; scope down to your actual domain
+  appDeliveryPage: https://mydomain.com/order?
+  aws:
+    awsAccountId: 123412341234
+    awsRandomDomain: abcde12345 # Get this after first deployment
+    database:
+      databaseRegion: eu-central-1
+      databaseName: microservicesdemo
+      databaseApiEndpoint: https://${self:custom.aws.awsRandomDomain}.execute-api.${self:provider.region}.amazonaws.com/${self:provider.stage}/database
+      tableName: Orders
+    arns:
+      auroraCluster: arn:aws:rds:${self:custom.aws.database.databaseRegion}:${self:custom.aws.awsAccountId}:cluster:${self:custom.aws.database.databaseName}-aurora
+      auroraSecretValue: arn:aws:secretsmanager:${self:custom.aws.database.databaseRegion}:${self:custom.aws.awsAccountId}:secret:aurora-demo-dmdtmP
+      customEventbridgeBus: arn:aws:events:${self:provider.region}:${self:custom.aws.awsAccountId}:event-bus/${self:custom.aws.database.databaseName}
+  nodemailer: # Pre-create these at https://ethereal.email/create
+    user: something@ethereal.email
+    password: something
+  webpack:
+    webpackConfig: 'webpack.config.js'
+    includeModules: true
+    packager: 'npm'
+    excludeFiles: src/**/*.test.js
+
+plugins:
+  - serverless-offline
+  - serverless-webpack
+  - serverless-iam-roles-per-function
+
+package:
+  individually: true
+  exclude:
+    - node_modules/aws-sdk/**
+    - node_modules/aws-lambda/**
+
+functions:
+  # Create order
+  createOrder:
+    handler: src/microservices/order/controllers/CreateOrder.CreateOrder
+    iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - events:PutEvents
+      Resource: ${self:custom.aws.arns.customEventbridgeBus}
+    events:
+    - http:
+        path: createOrder
+        method: POST
+        request:
+          schema:
+            application/json: ${file(schema.json)}
+        cors:
+          origin: ${self:custom.allowedOrigin}
+    - http:
+        path: createOrder
+        method: OPTIONS
+        cors:
+          origin: ${self:custom.allowedOrigin}
+    environment:
+      ALLOWED_ORIGIN: ${self:custom.allowedOrigin}
+
+  # Place order
+  placeOrder:
+    handler: src/microservices/order/controllers/PlaceOrder.PlaceOrder
+    events:
+    - http:
+        path: placeOrder
+        method: POST
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.order
+          detail-type:
+            - OrderCreated
+    environment:
+      DATABASE_API_ENDPOINT: ${self:custom.aws.database.databaseApiEndpoint}
+
+  # Update order status
+  updateOrderStatus:
+    handler: src/microservices/order/controllers/UpdateOrderStatus.UpdateOrderStatus
+    events:
+    - http:
+        path: updateOrderStatus
+        method: POST
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.stock
+          detail-type:
+            - StockCreated
+        inputTransformer:
+          inputPathsMap:
+            orderId: '$.detail.orderId'
+          inputTemplate: '{"orderId": <orderId>, "transaction": "StockCreated"}'
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.delivery
+          detail-type:
+            - DeliveryBooked
+        inputTransformer:
+          inputPathsMap:
+            orderId: '$.detail.orderId'
+          inputTemplate: '{"orderId": <orderId>, "transaction": "DeliveryBooked"}'
+    environment:
+      DATABASE_API_ENDPOINT: ${self:custom.aws.database.databaseApiEndpoint}
+
+  # Book delivery
+  bookDelivery:
+    handler: src/microservices/delivery/BookDelivery.BookDelivery
+    iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - events:PutEvents
+      Resource: ${self:custom.aws.arns.customEventbridgeBus}
+    events:
+    - http:
+        path: bookDelivery
+        method: POST
+        cors:
+          origin: ${self:custom.allowedOrigin}
+    - http:
+        path: bookDelivery
+        method: OPTIONS
+        cors:
+          origin: ${self:custom.allowedOrigin}
+    # The below will "auto-book" on the OrderDeliverable event; good for using when testing the system
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.order
+          detail-type:
+            - OrderDeliverable
+        inputTransformer:
+          inputPathsMap:
+            orderId: '$.detail.orderId'
+            name: '$.detail.name'
+            email: '$.detail.email'
+            phone: '$.detail.phone'
+            street: '$.detail.street'
+            city: '$.detail.city'
+          inputTemplate: '{"orderId": <orderId>, "name": <name>, "email": <email>, "phone": <phone>, "street": <street>, "city": <city>, "deliveryTime": "1614621600"}'
+    environment:
+      DATABASE_API_ENDPOINT: ${self:custom.aws.database.databaseApiEndpoint}
+      ALLOWED_ORIGIN: ${self:custom.allowedOrigin}
+
+  # Delivery times
+  deliveryTimes:
+    handler: src/microservices/delivery/DeliveryTimes.DeliveryTimes
+    events:
+    - http:
+        path: deliveryTimes
+        method: GET
+    environment:
+      ALLOWED_ORIGIN: ${self:custom.allowedOrigin}
+
+  # Email
+  email:
+    handler: src/microservices/email/Email.Email
+    events:
+    - http:
+        path: email
+        method: POST
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.order
+          detail-type:
+            - OrderCreated
+        inputTransformer:
+          inputPathsMap:
+            orderId: '$.detail.orderId'
+            name: '$.detail.name'
+            email: '$.detail.email'
+          inputTemplate: '{"transaction": "OrderCreated", "orderId": <orderId>, "name": <name>, "email": <email>}'
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.order
+          detail-type:
+            - OrderDeliverable
+        inputTransformer:
+          inputPathsMap:
+            orderId: '$.detail.orderId'
+            name: '$.detail.name'
+            email: '$.detail.email'
+          inputTemplate: '{"transaction": "OrderDeliverable", "orderId": <orderId>, "name": <name>, "email": <email>}'
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.delivery
+          detail-type:
+            - DeliveryBooked
+        inputTransformer:
+          inputPathsMap:
+            orderId: '$.detail.orderId'
+            name: '$.detail.name'
+            email: '$.detail.email'
+            phone: '$.detail.phone'
+            street: '$.detail.street'
+            city: '$.detail.city'
+            deliveryTime: '$.detail.deliveryTime'
+          inputTemplate: '{"transaction": "DeliveryBooked", "orderId": <orderId>, "name": <name>, "email": <email>, "phone": <phone>, "street": <street>, "city": <city>, "time": <deliveryTime>}'
+    environment:
+      DELIVERY_URL_BASE: ${self:custom.appDeliveryPage}
+      NODEMAILER_USER: ${self:custom.nodemailer.user}
+      NODEMAILER_PASS: ${self:custom.nodemailer.password}
+
+  # Database
+  database:
+    handler: src/microservices/database/index.server
+    timeout: 30
+    events:
+    - http:
+        path: database
+        method: POST
+    iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - rds-data:*
+      Resource: ${self:custom.aws.arns.auroraCluster}
+    - Effect: Allow
+      Action:
+        - secretsmanager:GetSecretValue
+      Resource: ${self:custom.aws.arns.auroraSecretValue}
+    - Effect: Allow
+      Action:
+        - events:PutEvents
+      Resource: ${self:custom.aws.arns.customEventbridgeBus}
+    environment:
+      DATABASE_REGION: ${self:custom.aws.database.databaseRegion}
+      DB_NAME: ${self:custom.aws.database.databaseName}
+      TABLE_NAME: ${self:custom.aws.database.tableName}
+      SECRET_ARN: ${self:custom.aws.arns.auroraSecretValue}
+      CLUSTER_ARN: ${self:custom.aws.arns.auroraCluster}
+
+  # Finance
+  finance:
+    handler: src/microservices/finance/Finance.Finance
+    events:
+    - http:
+        path: finance
+        method: POST
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.order
+          detail-type:
+            - OrderPlaced
+
+  # Stock
+  stock:
+    handler: src/microservices/stock/Stock.Stock
+    events:
+    - http:
+        path: stock
+        method: POST
+    - eventBridge:
+        eventBus: ${self:custom.aws.arns.customEventbridgeBus}
+        pattern:
+          source:
+            - microservicesdemo.order
+          detail-type:
+            - OrderPlaced
+        inputTransformer:
+          inputPathsMap:
+            orderId: '$.detail.orderId'
+          inputTemplate: '{"orderId": <orderId>}'
+    iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - events:PutEvents
+      Resource: ${self:custom.aws.arns.customEventbridgeBus}
