@@ -33,14 +33,15 @@ custom:
   aws:
     awsAccountId: 123412341234
     awsRandomDomain: abcde12345 # Get this after first deployment
+    secretName: my-aurora-abc123 # Set this after creating the secret
     database:
       databaseRegion: eu-central-1
       databaseName: microservicesdemo
       databaseApiEndpoint: https://${self:custom.aws.awsRandomDomain}.execute-api.${self:provider.region}.amazonaws.com/${self:provider.stage}/database
       tableName: Orders
     arns:
-      auroraCluster: arn:aws:rds:${self:custom.aws.database.databaseRegion}:${self:custom.aws.awsAccountId}:cluster:${self:custom.aws.database.databaseName}-aurora
-      auroraSecretValue: arn:aws:secretsmanager:${self:custom.aws.database.databaseRegion}:${self:custom.aws.awsAccountId}:secret:aurora-demo-dmdtmP
+      auroraCluster: arn:aws:rds:${self:custom.aws.database.databaseRegion}:${self:custom.aws.awsAccountId}:cluster:${self:custom.aws.database.databaseName}
+      auroraSecretValue: arn:aws:secretsmanager:${self:custom.aws.database.databaseRegion}:${self:custom.aws.awsAccountId}:secret:${self:custom.aws.secretName}
       customEventbridgeBus: arn:aws:events:${self:provider.region}:${self:custom.aws.awsAccountId}:event-bus/${self:custom.aws.database.databaseName}
   nodemailer: # Pre-create these at https://ethereal.email/create
     user: something@ethereal.email
