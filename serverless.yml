@@ -35,7 +35,7 @@ custom:
     awsRandomDomain: abcde12345 # Get this after first deployment
     secretName: my-aurora-abc123 # Set this after creating the secret
     database:
-      databaseRegion: eu-central-1
+      databaseRegion: eu-central-1 # Change if needed
       databaseName: microservicesdemo
       databaseApiEndpoint: https://${self:custom.aws.awsRandomDomain}.execute-api.${self:provider.region}.amazonaws.com/${self:provider.stage}/database
       tableName: Orders
