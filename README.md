@@ -30,7 +30,7 @@ Source code uses the following technologies:
 
 The source code is structured to conform with Clean Architecture, which resembles Domain Driven Design (DDD) so architects can have a better idea of how the actual code could be separated and structured in this type of scenario.
 
-Note that the focus here is not on any ancillary aspects like CI, deployment, IAC or those types of concerns, but those parts should be sufficiently catered by the included Serverless Framework configuration.
+Note that the focus here is not on any ancillary aspects like CI, deployment, IAC or those types of concerns, but such parts should be sufficiently catered by the included Serverless Framework configuration.
 
 ## Scenario
 
@@ -49,7 +49,7 @@ The most pressing requirements underpinning the business decision to spend time 
 - **Observability and real-time alerting**: Minimize time to uncover problems, and let the system inform about any operational issues
 - **Reliability**: Systems need to be up and working without any significant downtime, nothing can fail/fall through undetected
 - **Elasticity**: Sudden influx of customers should not mean any part of the system fails or becomes slow
-- **Testability**: To support faster throughput and agile work, the overall flow musy be testable (third parties must be mockable)
+- **Testability**: To support faster throughput and agile work, the overall flow must be testable (third parties must be mockable)
 
 Implicit requirements include performance and security, but these are to be handled on a "by-the-book" or "hygiene" kind of level.
 
@@ -150,8 +150,6 @@ Put the Ethereal details in `serverless.yml` under `custom.nodemailer`. Also, pl
 
 Ensure that any regions are correct.
 
-The `custom.appDeliveryPage` key refers to the URL which the second email will point to, where the user is expected to make their delivery time choice.
-
 ### 4. Perform first deployment
 
 Run `sls deploy` to deploy the stack with Serverless Framework. You'll want this first dummy deployment in order to create some resources you'll need to refer to shortly.
@@ -173,6 +171,8 @@ If you want to use the front-end application, go to `src/app/js/app.js` and upda
 ### Optional: Deploy front-end
 
 I suggest you use a static hosting service like Netlify or Vercel to host the simple web application.
+
+In `serverless.yml`, the `custom.appDeliveryPage` key refers to the URL which the second email will point to, where the user is expected to make their delivery time choice. So if your Netlify site is `my-aws-demo.netlify.app`, the value would be `https://my-aws-demo.netlify.app/delivery.html?order=`
 
 ## System test
 
