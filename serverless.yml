@@ -29,7 +29,7 @@ provider:
 
 custom:
   allowedOrigin: "*" # Ideally don't use this; scope down to your actual domain
-  appDeliveryPage: https://mydomain.com/delivery.html?
+  appDeliveryPage: https://mydomain.com/delivery.html?order=
   aws:
     awsAccountId: 123412341234
     awsRandomDomain: abcde12345 # Get this after first deployment
