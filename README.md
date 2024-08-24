@@ -132,9 +132,11 @@ When it comes to testability, you may wonder if it's really comparable using "fa
 
 ## Instructions
 
-### 1. Create AWS RDS (Aurora Serverless) instance
+### 1. Create AWS RDS (Aurora Serverless) instance and EventBridge bus
 
 Create a secret and Aurora instance as per [https://awsauroralabsmy.com/serverless/create/](https://awsauroralabsmy.com/serverless/create/).
+
+Next, create an EventBridge bus named the same your database cluster. Place it in the same region as the database.
 
 ### 2. Create the Orders table
 
